@@ -1,20 +1,28 @@
 <template>
   <div class="main-wrapper">
-    {{ experienceSection.name5 }}
-    <h3></h3>
+    {{ experienceSection.jobName }}
   </div>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import { ExperienceDescription } from "@/enum/ExperienceEnum";
+import { ExperienceSection } from "@/enum/ExperienceEnum";
 
 export default defineComponent({
   name: "resume-content",
   components: {},
   setup() {
-    const experienceSection = ref<ExperienceDescription>({
-      subject: "123",
-      list: ["1", "2"],
+    const experienceSection = ref<ExperienceSection>({
+      jobName: "a1",
+      company: "a2",
+      location: "a3",
+      workStart: "a4",
+      workEnd: "a5",
+      descriptionList: [
+        {
+          subject: "b1",
+          list: ["c1", "c2"],
+        },
+      ],
     });
     return {
       experienceSection,

@@ -4,11 +4,11 @@ interface ExperienceSection {
   location: string;
   workStart: string;
   workEnd: string;
-  descriptionList: Array<ExperienceDescription>;
+  descriptionList?: Array<ExperienceDescription>;
 }
 
 interface ExperienceDescription {
-  subject: string;
-  list: Array<string>;
+  subject?: string;
+  list?: Array<string>;
 }
 export { ExperienceSection, ExperienceDescription };

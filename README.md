@@ -36,13 +36,11 @@ npm run test:e2e
 npm run lint
 ```
 
-
 ### Format with prettier
 
 ```sh
 npm run format
 ```
-
 
 ### Customize configuration
 
