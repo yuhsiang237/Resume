@@ -1,30 +1,36 @@
 # Yu Hsiang's Resume / CV
 
-## Project Setup
+## Project setup
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Compiles and hot-reloads for development
 
 ```sh
-npm run dev
+npm run serve
 ```
 
-### Type-Check, Compile and Minify for Production
+### Compiles and minifies for production
 
 ```sh
 npm run build
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+### Run your unit tests
 
 ```sh
 npm run test:unit
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Run your end-to-end tests
+
+```sh
+npm run test:e2e
+```
+
+### Lints and fixes files
 
 ```sh
 npm run lint
@@ -36,3 +42,8 @@ npm run lint
 ```sh
 npm run format
 ```
+
+
+### Customize configuration
+
+See [Configuration Reference](https://cli.vuejs.org/config/).
