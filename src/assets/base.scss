@@ -1,0 +1,20 @@
+.wrapper {
+  background: #42a8c0;
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);
+}
+.sidebar-wrapper {
+  background: #545e6c;
+  position: absolute;
+  right: 0;
+  width: 240px;
+  height: 100%;
+  color: #fff;
+}
+.main-wrapper {
+  background: #fff;
+  padding: 60px;
+  padding-right: 300px;
+}
