@@ -275,7 +275,7 @@
 </template>
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import { ExperienceSection } from "@/enum/ExperienceEnum";
+import { ExperienceSection } from "@/enums/ExperienceEnum";
 
 export default defineComponent({
   name: "resume-content",

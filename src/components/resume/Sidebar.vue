@@ -55,8 +55,8 @@
 </template>
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import { Profile } from "@/enum/ProfileEnum";
-import { Concact } from "@/enum/ConcactEnum";
+import { Profile } from "@/enums/ProfileEnum";
+import { Concact } from "@/enums/ConcactEnum";
 
 export default defineComponent({
   name: "resume-sidebar",
