@@ -1,5 +1,5 @@
 interface Profile {
-  img:string;
+  img: string;
   name: string;
   tagline: string;
 }
