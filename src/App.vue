@@ -4,6 +4,7 @@
 <style>
 @import "@/assets/bootstrap.min.css";
 @import "@/assets/base.scss";
+@import "@/assets/custom.scss";
 </style>
 <script setup lang="ts">
 import { RouterView } from "vue-router";

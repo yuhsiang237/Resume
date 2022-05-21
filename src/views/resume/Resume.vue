@@ -1,11 +1,9 @@
 <template>
   <div class="wrapper mt-lg-5">
-    <resume-sidebar />
+    <resume-sidebar /> 
     <resume-content />
-  </div>
-  <div class="mt-3">
-    <resume-footer />
-  </div>
+</div>
+<resume-footer />
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
