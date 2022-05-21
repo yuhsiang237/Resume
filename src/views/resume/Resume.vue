@@ -3,9 +3,7 @@
     <resume-sidebar />
     <resume-content />
   </div>
-  <div class="mt-3">
-    <resume-footer />
-  </div>
+  <resume-footer />
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
