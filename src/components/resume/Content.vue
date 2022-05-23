@@ -211,35 +211,27 @@ export default defineComponent({
     const skillList = ref<Skill[]>([
       {
         name: "C#",
-        value: 90,
       },
       {
         name: "Javascript & ES6",
-        value: 90,
       },
       {
         name: "Typescript",
-        value: 80,
       },
       {
         name: "Java",
-        value: 75,
       },
       {
         name: "Microsoft SQL Server",
-        value: 80,
       },
       {
         name: "PostgreSQL",
-        value: 70,
       },
       {
         name: "Vue3",
-        value: 85,
       },
       {
         name: "React (Hook)",
-        value: 70,
       },
     ]);
 
