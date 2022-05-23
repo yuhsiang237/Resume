@@ -57,34 +57,42 @@
         &amp; Proficiency
       </h2>
       <div class="skillset">
-        <span :key="index" v-for="(item, index) in skillList" class="label label-default">{{ item.name }}</span>
+        <span
+          :key="index"
+          v-for="(item, index) in skillList"
+          class="label label-default"
+          >{{ item.name }}</span
+        >
         <!--//item-->
       </div>
     </section>
     <!--//skills-section-->
     <section class="education-section section">
       <h2 class="section-title">
-        <span class="icon-holder"><i class="fa fa-graduation-cap"></i></span>Education</h2>
+        <span class="icon-holder"><i class="fa fa-graduation-cap"></i></span
+        >Education
+      </h2>
       <div class="educationset">
-      
-      <div class="item" :key="index" v-for="(item,index) in eduList">
+        <div class="item" :key="index" v-for="(item, index) in eduList">
           <div class="meta">
-              <div class="upper-row">
-                  <h3 class="degree">{{item.degree}}</h3>
-                  <div class="time">{{item.time}}</div>
-              </div>
-              <div class="college">{{item.college}}</div>
+            <div class="upper-row">
+              <h3 class="degree">{{ item.degree }}</h3>
+              <div class="time">{{ item.time }}</div>
+            </div>
+            <div class="college">{{ item.college }}</div>
           </div>
           <div class="details">
-              <p></p><ul>
-<li :key="index" v-for="(item,index) in item.list">{{item}}</li>
-</ul>
-<p></p>
+            <p></p>
+            <ul>
+              <li :key="index" v-for="(item, index) in item.list">
+                {{ item }}
+              </li>
+            </ul>
+            <p></p>
           </div>
+        </div>
       </div>
-      
-      </div>
-  </section>
+    </section>
   </div>
   <!--//main-body-->
 </template>
@@ -230,18 +238,20 @@ export default defineComponent({
       },
     ]);
 
-    const eduList = ref<Edu[]>([{
-      degree: 'BSc in Computer Science',
-      time: '2014 - 2018',
-      college:'Chinese Culture University',
-      list:['Study Software Engineering']
-    }])
+    const eduList = ref<Edu[]>([
+      {
+        degree: "BSc in Computer Science",
+        time: "2014 - 2018",
+        college: "Chinese Culture University",
+        list: ["Study Software Engineering"],
+      },
+    ]);
 
     return {
       experienceList,
       projectList,
       skillList,
-      eduList
+      eduList,
     };
   },
 });

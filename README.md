@@ -1,4 +1,5 @@
 # Yu Hsiang's Resume / CV
+
 ![workflow](https://github.com/yuhsiang237/Resume/actions/workflows/node.js.yml/badge.svg)
 
 ## Project setup
