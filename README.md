@@ -1,8 +1,8 @@
 # Yu Hsiang's Resume / CV
-
-![workflow](https://github.com/yuhsiang237/Resume/actions/workflows/node.js.yml/badge.svg)
-
 This is my english resume, and it builds through Vue3 and Typescript.
+
+## Build Status
+![workflow](https://github.com/yuhsiang237/Resume/actions/workflows/node.js.yml/badge.svg)
 
 ## Project setup
 
