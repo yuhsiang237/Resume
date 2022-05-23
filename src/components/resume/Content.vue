@@ -50,7 +50,6 @@
       </div>
     </section>
     <!--//section-->
-
     <section class="skills-section section">
       <h2 class="section-title">
         <span class="icon-holder"><i class="fas fa-rocket"></i></span>Skills
@@ -200,6 +199,12 @@ export default defineComponent({
         description:
           "Manage commodity incoming, outgoing, ordering, inventory systems",
         href: "https://github.com/yuhsiang237/Order-System",
+      },
+      {
+        projectName: "Resume",
+        description:
+          "The resume created with Vue3 and Typescript, and has workflow(CI/CD pipeline) on github",
+        href: "https://github.com/yuhsiang237/Resume",
       },
     ]);
 
