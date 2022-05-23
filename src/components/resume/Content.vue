@@ -5,77 +5,30 @@
         <span class="icon-holder"><i class="fas fa-briefcase"></i></span
         >Experiences
       </h2>
-      <div class="item">
-        <div class="meta">
-          <div class="upper-row">
-            <h3 class="job-title">Lead Developer</h3>
-            <div class="time">2019 - Present</div>
-          </div>
-          <!--//upper-row-->
-          <div class="company">Startup Hubs, San Francisco</div>
-        </div>
-        <!--//meta-->
-        <div class="details">
-          <p>
-            Describe your role here lorem ipsum dolor sit amet, consectetuer
-            adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-            sociis natoque penatibus et magnis dis parturient montes, nascetur
-            ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-            pretium quis, sem. Nulla consequat massa quis enim. Donec pede
-            justo.
-          </p>
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo.
-          </p>
-        </div>
-        <!--//details-->
-      </div>
-      <!--//item-->
 
-      <div class="item">
+      <div class="item" :key="index" v-for="(item, index) in experienceList">
         <div class="meta">
           <div class="upper-row">
-            <h3 class="job-title">Senior Software Engineer</h3>
-            <div class="time">2018 - 2019</div>
+            <h3 class="job-title">{{ item.jobTitle }}</h3>
+            <div class="time">{{ item.workStart }} - {{ item.workEnd }}</div>
+          </div>
+          <div class="upper-row">
+            <div class="company">{{ item.company }}</div>
+            <div class="time">{{ item.location }}</div>
           </div>
           <!--//upper-row-->
-          <div class="company">Google, London</div>
         </div>
         <!--//meta-->
         <div class="details">
-          <p>
-            Describe your role here lorem ipsum dolor sit amet, consectetuer
-            adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-            sociis natoque penatibus et magnis dis parturient montes, nascetur
-            ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-            pretium quis, sem.
-          </p>
-        </div>
-        <!--//details-->
-      </div>
-      <!--//item-->
-
-      <div class="item">
-        <div class="meta">
-          <div class="upper-row">
-            <h3 class="job-title">UI Developer</h3>
-            <div class="time">2016 - 2018</div>
-          </div>
-          <!--//upper-row-->
-          <div class="company">Amazon, London</div>
-        </div>
-        <!--//meta-->
-        <div class="details">
-          <p>
-            Describe your role here lorem ipsum dolor sit amet, consectetuer
-            adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-            sociis natoque penatibus et magnis dis parturient montes, nascetur
-            ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-            pretium quis, sem.
-          </p>
+          <p>{{ item.experienceDescription.subject }}</p>
+          <ul>
+            <li
+              :key="index"
+              v-for="(item, index) in item.experienceDescription.list"
+            >
+              {{ item }}
+            </li>
+          </ul>
         </div>
         <!--//details-->
       </div>
@@ -87,88 +40,14 @@
       <h2 class="section-title">
         <span class="icon-holder"><i class="fas fa-archive"></i></span>Projects
       </h2>
-      <div class="intro">
-        <p>
-          You can list your side projects or open source libraries in this
-          section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Vestibulum et ligula in nunc bibendum fringilla a eu lectus.
-        </p>
-      </div>
       <!--//intro-->
-      <div class="item">
+      <div class="item" :key="index" v-for="(item, index) in projectList">
         <span class="project-title"
-          ><a
-            href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderpro-bootstrap-5-startup-template-for-software-projects/"
-            target="_blank"
-            >CoderPro</a
-          ></span
+          ><a :href="item.href" target="_blank">{{ item.projectName }}</a></span
         >
         -
-        <span class="project-tagline"
-          >A responsive website template designed to help developers launch
-          their software projects.
-        </span>
+        <span class="project-tagline">{{ item.description }} </span>
       </div>
-      <!--//item-->
-      <div class="item">
-        <span class="project-title"
-          ><a
-            href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/launch-bootstrap-5-template-for-saas-businesses/"
-            target="_blank"
-            >Launch</a
-          ></span
-        >
-        -
-        <span class="project-tagline"
-          >A responsive website template designed to help startups promote their
-          products or services.</span
-        >
-      </div>
-      <!--//item-->
-      <div class="item">
-        <span class="project-title"
-          ><a
-            href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/devcard-bootstrap-5-vcard-portfolio-template-for-software-developers/"
-            target="_blank"
-            >DevCard</a
-          ></span
-        >
-        -
-        <span class="project-tagline"
-          >A portfolio website template designed for software developers.</span
-        >
-      </div>
-      <!--//item-->
-      <div class="item">
-        <span class="project-title"
-          ><a
-            href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/bootstrap-template-for-mobile-apps-nova-pro/"
-            target="_blank"
-            >Nova Pro</a
-          ></span
-        >
-        -
-        <span class="project-tagline"
-          >A responsive Bootstrap theme designed to help app developers promote
-          their mobile apps</span
-        >
-      </div>
-      <!--//item-->
-      <div class="item">
-        <span class="project-title"
-          ><a
-            href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-web-development-agencies-devstudio/"
-            target="_blank"
-            >DevStudio</a
-          ></span
-        >
-        -
-        <span class="project-tagline"
-          >A responsive website template designed to help web
-          developers/designers market their services.
-        </span>
-      </div>
-      <!--//item-->
     </section>
     <!--//section-->
 
@@ -178,89 +57,14 @@
         &amp; Proficiency
       </h2>
       <div class="skillset">
-        <div class="item">
-          <h3 class="level-title">Python &amp; Django</h3>
+        <div class="item" :key="index" v-for="(item, index) in skillList">
+          <h3 class="level-title">{{ item.name }}</h3>
           <div class="progress level-bar">
             <div
               class="progress-bar theme-progress-bar"
               role="progressbar"
-              style="width: 99%"
-              aria-valuenow="99"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            ></div>
-          </div>
-        </div>
-        <!--//item-->
-
-        <div class="item">
-          <h3 class="level-title">Javascript</h3>
-          <div class="progress level-bar">
-            <div
-              class="progress-bar theme-progress-bar"
-              role="progressbar"
-              style="width: 98%"
-              aria-valuenow="98"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            ></div>
-          </div>
-        </div>
-        <!--//item-->
-
-        <div class="item">
-          <h3 class="level-title">React &amp; Angular</h3>
-          <div class="progress level-bar">
-            <div
-              class="progress-bar theme-progress-bar"
-              role="progressbar"
-              style="width: 98%"
-              aria-valuenow="98"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            ></div>
-          </div>
-        </div>
-        <!--//item-->
-
-        <div class="item">
-          <h3 class="level-title">HTML5 &amp; CSS</h3>
-          <div class="progress level-bar">
-            <div
-              class="progress-bar theme-progress-bar"
-              role="progressbar"
-              style="width: 95%"
-              aria-valuenow="95"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            ></div>
-          </div>
-        </div>
-        <!--//item-->
-
-        <div class="item">
-          <h3 class="level-title">Ruby on Rails</h3>
-          <div class="progress level-bar">
-            <div
-              class="progress-bar theme-progress-bar"
-              role="progressbar"
-              style="width: 85%"
-              aria-valuenow="85"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            ></div>
-          </div>
-        </div>
-        <!--//item-->
-
-        <div class="item">
-          <h3 class="level-title">Sketch &amp; Photoshop</h3>
-          <div class="progress level-bar">
-            <div
-              class="progress-bar theme-progress-bar"
-              role="progressbar"
-              style="width: 60%"
-              aria-valuenow="60"
+              :style="'width:' + item.value + '%'"
+              :aria-valuenow="item.value"
               aria-valuemin="0"
               aria-valuemax="100"
             ></div>
@@ -275,27 +79,148 @@
 </template>
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import { ExperienceSection } from "@/enums/ExperienceEnum";
+import { Experience } from "@/enums/ExperienceEnum";
+import { Project } from "@/enums/ProjectEnum";
+import { Skill } from "@/enums/SkillEnum";
 
 export default defineComponent({
   name: "resume-content",
   components: {},
   setup() {
-    const experienceSection = ref<ExperienceSection>({
-      jobName: "a1",
-      company: "a2",
-      location: "a3",
-      workStart: "a4",
-      workEnd: "a5",
-      descriptionList: [
-        {
-          subject: "b1",
-          list: ["c1", "c2"],
+    const experienceList = ref<Experience[]>([
+      {
+        jobTitle: "Software Engineer",
+        company: "Wistron ITS",
+        location: "Taipei, Taiwan",
+        workStart: "Feb. 2022",
+        workEnd: "Present (4 mos)",
+        experienceDescription: {
+          subject: "Stationed at E.SUN Commercial Bank, Ltd.",
+          list: [
+            "Build the financial loan system (E.SUN Commercial Bank, Ltd.)",
+            "Create the procedure of finance in PostgreSQL and Microsoft SQL Server",
+            "Design and create the table schema of financial system",
+            "Create and run unit test in the programs, using Xunit and Moq(mock the fake object)",
+            "Use API call to other microservices of E.SUN bank",
+            "Develop the backend using C# and the frontend using Vue3",
+            "Use C# with ASP.NET Core and Vue3 with Typescript",
+            "Run CI/CD on Azure DevOps Server",
+            "Manage the code using git on Gitlab/Azure DevOps Server",
+            "Connect database with Dapper, and operate data with LINQ",
+            "Get the realtime log report of bug with Kibana",
+            "Use Redis as a cache",
+          ],
         },
-      ],
-    });
+      },
+      {
+        jobTitle: "Freelance",
+        company: "Myself",
+        location: "Kaohsiung City, Taiwan",
+        workStart: "Sep. 2020",
+        workEnd: "Jun. 2021 (10 mos)",
+        experienceDescription: {
+          list: [
+            "Assist the project with Flutter",
+            "Assist the software outsourcing",
+          ],
+        },
+      },
+      {
+        jobTitle: "Software Engineer",
+        company: "Linkchain",
+        location: "Kaohsiung City, Taiwan",
+        workStart: "Aug. 2018",
+        workEnd: "Aug 2020 (2 yrs 1 mos)",
+        experienceDescription: {
+          list: [
+            "Develop the government project of agriculture",
+            "Develop the report using React and C# ASP.NET Core",
+            "Develop the management system of farm with React Javascipt ES6  and C# ASP.NET Core",
+            "All 7 projects I participated in were successfully completed",
+          ],
+        },
+      },
+      {
+        jobTitle: "Software Engineer(Intern)",
+        company: "3drens",
+        location: "Taipei, Taiwan",
+        workStart: "Mar. 2018",
+        workEnd: "Jun. 2018 (4 mos)",
+        experienceDescription: {
+          list: [
+            "Develop the Internet of Vehicles System Development",
+            "Build the system with Node.js and React",
+            "Manage the code using git on Bitbucket",
+            "Integrate the program with Google Map",
+          ],
+        },
+      },
+      {
+        jobTitle: "Software Engineer(Intern)",
+        company: "Institute for Information Industry, III",
+        location: "Taipei, Taiwan",
+        workStart: "Dec. 2015",
+        workEnd: "Jun. 2016(7 mos)",
+        experienceDescription: {
+          list: [
+            "Develop VisCa LRS, a course system with Java",
+            "Develop the API with Java",
+            "Develop the viewing angle function",
+            "Build charts using Highcharts and Bootstrap",
+            "Improve API speed by modifying database statements",
+            "Use MongoDB and Mysql to store data",
+          ],
+        },
+      },
+    ]);
+
+    const projectList = ref<Project[]>([
+      {
+        projectName: "Order System",
+        description:
+          "Manage commodity incoming, outgoing, ordering, inventory systems",
+        href: "https://github.com/yuhsiang237/Order-System",
+      },
+    ]);
+
+    const skillList = ref<Skill[]>([
+      {
+        name: "C#",
+        value: 90,
+      },
+      {
+        name: "Javascript & ES6",
+        value: 90,
+      },
+      {
+        name: "Typescript",
+        value: 80,
+      },
+      {
+        name: "Java",
+        value: 75,
+      },
+      {
+        name: "Microsoft SQL Server",
+        value: 80,
+      },
+      {
+        name: "PostgreSQL",
+        value: 70,
+      },
+      {
+        name: "Vue3",
+        value: 85,
+      },
+      {
+        name: "React",
+        value: 70,
+      },
+    ]);
     return {
-      experienceSection,
+      experienceList,
+      projectList,
+      skillList,
     };
   },
 });

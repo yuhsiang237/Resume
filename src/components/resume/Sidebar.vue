@@ -47,8 +47,9 @@
     <div class="languages-container container-block">
       <h2 class="container-block-title">Languages</h2>
       <ul class="list-unstyled interests-list">
-        <li>Chinese Traditional</li>
-        <li>English</li>
+        <li :key="index" v-for="(item, index) in languageList">
+          {{ item.name }}<span class="lang-desc">({{ item.desc }})</span>
+        </li>
       </ul>
     </div>
   </div>
@@ -57,6 +58,7 @@
 import { defineComponent, ref } from "vue";
 import { Profile } from "@/enums/ProfileEnum";
 import { Concact } from "@/enums/ConcactEnum";
+import { Language } from "@/enums/LanguageEnum";
 
 export default defineComponent({
   name: "resume-sidebar",
@@ -73,9 +75,20 @@ export default defineComponent({
       linkedin: "yu-hsiang-lin-6046ab22b",
       github: "yuhsiang237",
     });
+    const languageList = ref<Language[]>([
+      {
+        name: "Tradition Chinese",
+        desc: "Native",
+      },
+      {
+        name: "English",
+        desc: "Conversational",
+      },
+    ]);
     return {
       profile,
       concact,
+      languageList,
     };
   },
 });
