@@ -29,7 +29,7 @@ jobs:
         run: npm install -g @vue/cli
       - name: Install package
         run: npm install
-      - name: Install package
+      - name: Run unit test
         run: npm run test:unit
-      - name: Install package
+      - name: Run build
         run: npm run build
