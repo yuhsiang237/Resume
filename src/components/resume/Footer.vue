@@ -13,9 +13,7 @@
         ></small
       >
     </div>
-    <!--//container-->
   </footer>
-  <!--//footer-->
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";

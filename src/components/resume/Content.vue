@@ -5,7 +5,6 @@
         <span class="icon-holder"><i class="fas fa-briefcase"></i></span
         >Experiences
       </h2>
-
       <div class="item" :key="index" v-for="(item, index) in experienceList">
         <div class="meta">
           <div class="upper-row">
@@ -16,9 +15,7 @@
             <div class="company">{{ item.company }}</div>
             <div class="time">{{ item.location }}</div>
           </div>
-          <!--//upper-row-->
         </div>
-        <!--//meta-->
         <div class="details">
           <p>{{ item.experienceDescription.subject }}</p>
           <ul>
@@ -30,17 +27,12 @@
             </li>
           </ul>
         </div>
-        <!--//details-->
       </div>
-      <!--//item-->
     </section>
-    <!--//section-->
-
     <section class="section projects-section">
       <h2 class="section-title">
         <span class="icon-holder"><i class="fas fa-archive"></i></span>Projects
       </h2>
-      <!--//intro-->
       <div class="item" :key="index" v-for="(item, index) in projectList">
         <span class="project-title"
           ><a :href="item.href" target="_blank">{{ item.projectName }}</a></span
@@ -49,7 +41,6 @@
         <span class="project-tagline">{{ item.description }} </span>
       </div>
     </section>
-    <!--//section-->
     <section class="skills-section section">
       <h2 class="section-title">
         <span class="icon-holder"><i class="fas fa-rocket"></i></span>Skills
@@ -62,10 +53,8 @@
           class="label label-default"
           >{{ item.name }}</span
         >
-        <!--//item-->
       </div>
     </section>
-    <!--//skills-section-->
     <section class="education-section section">
       <h2 class="section-title">
         <span class="icon-holder"><i class="fa fa-graduation-cap"></i></span
@@ -93,7 +82,6 @@
       </div>
     </section>
   </div>
-  <!--//main-body-->
 </template>
 <script lang="ts">
 import { defineComponent, ref } from "vue";

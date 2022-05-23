@@ -10,7 +10,6 @@
       <h1 class="name">{{ profile.name }}</h1>
       <h3 class="tagline">{{ profile.tagline }}</h3>
     </div>
-    <!--//profile-container-->
     <div class="contact-container container-block">
       <ul class="list-unstyled contact-list">
         <li v-if="concact.email" class="email">
@@ -43,7 +42,6 @@
         </li>
       </ul>
     </div>
-    <!--//contact-container-->
     <div class="languages-container container-block">
       <h2 class="container-block-title">Languages</h2>
       <ul class="list-unstyled interests-list">
