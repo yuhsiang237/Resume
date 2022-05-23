@@ -56,13 +56,12 @@
 </template>
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import { Profile } from "@/enums/ProfileEnum";
-import { Concact } from "@/enums/ConcactEnum";
-import { Language } from "@/enums/LanguageEnum";
+import { Profile } from "@/models/ProfileModel";
+import { Concact } from "@/models/ConcactModel";
+import { Language } from "@/models/LanguageModel";
 
 export default defineComponent({
   name: "resume-sidebar",
-  components: {},
   setup() {
     const profile = ref<Profile>({
       img: "https://avatars.githubusercontent.com/u/12533553?v=4",

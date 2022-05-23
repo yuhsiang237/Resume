@@ -97,14 +97,13 @@
 </template>
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import { Experience } from "@/enums/ExperienceEnum";
-import { Project } from "@/enums/ProjectEnum";
-import { Skill } from "@/enums/SkillEnum";
-import { Edu } from "@/enums/EduEnum";
+import { Experience } from "@/models/ExperienceModel";
+import { Project } from "@/models/ProjectModel";
+import { Skill } from "@/models/SkillModel";
+import { Edu } from "@/models/EduModel";
 
 export default defineComponent({
   name: "resume-content",
-  components: {},
   setup() {
     const experienceList = ref<Experience[]>([
       {
