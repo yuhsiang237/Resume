@@ -57,23 +57,34 @@
         &amp; Proficiency
       </h2>
       <div class="skillset">
-        <div class="item" :key="index" v-for="(item, index) in skillList">
-          <h3 class="level-title">{{ item.name }}</h3>
-          <div class="progress level-bar">
-            <div
-              class="progress-bar theme-progress-bar"
-              role="progressbar"
-              :style="'width:' + item.value + '%'"
-              :aria-valuenow="item.value"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            ></div>
-          </div>
-        </div>
+        <span :key="index" v-for="(item, index) in skillList" class="label label-default">{{ item.name }}</span>
         <!--//item-->
       </div>
     </section>
     <!--//skills-section-->
+    <section class="education-section section">
+      <h2 class="section-title">
+        <span class="icon-holder"><i class="fa fa-graduation-cap"></i></span>Education</h2>
+      <div class="educationset">
+      
+      <div class="item" :key="index" v-for="(item,index) in eduList">
+          <div class="meta">
+              <div class="upper-row">
+                  <h3 class="degree">{{item.degree}}</h3>
+                  <div class="time">{{item.time}}</div>
+              </div>
+              <div class="college">{{item.college}}</div>
+          </div>
+          <div class="details">
+              <p></p><ul>
+<li :key="index" v-for="(item,index) in item.list">{{item}}</li>
+</ul>
+<p></p>
+          </div>
+      </div>
+      
+      </div>
+  </section>
   </div>
   <!--//main-body-->
 </template>
@@ -82,6 +93,7 @@ import { defineComponent, ref } from "vue";
 import { Experience } from "@/enums/ExperienceEnum";
 import { Project } from "@/enums/ProjectEnum";
 import { Skill } from "@/enums/SkillEnum";
+import { Edu } from "@/enums/EduEnum";
 
 export default defineComponent({
   name: "resume-content",
@@ -213,14 +225,23 @@ export default defineComponent({
         value: 85,
       },
       {
-        name: "React",
+        name: "React (Hook)",
         value: 70,
       },
     ]);
+
+    const eduList = ref<Edu[]>([{
+      degree: 'BSc in Computer Science',
+      time: '2014 - 2018',
+      college:'Chinese Culture University',
+      list:['Study Software Engineering']
+    }])
+
     return {
       experienceList,
       projectList,
       skillList,
+      eduList
     };
   },
 });
