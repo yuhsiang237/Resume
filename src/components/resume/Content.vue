@@ -120,7 +120,7 @@ export default defineComponent({
       },
       {
         jobTitle: "Freelance",
-        company: "Myself",
+        company: "Self employed",
         location: "Kaohsiung City, Taiwan",
         workStart: "Sep. 2020",
         workEnd: "Jun. 2021 (10 mos)",
