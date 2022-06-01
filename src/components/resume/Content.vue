@@ -122,6 +122,22 @@ export default defineComponent({
         },
       },
       {
+        jobTitle: "Programming Tutor",
+        company: "Self employed",
+        location: "Taipei, Taiwan",
+        workStart: "Mar. 2022",
+        workEnd: `Present (${
+          new Date().getMonth() - new Date("2022-02-01 00:00:00").getMonth() + 1
+        } mos)`,
+        experienceDescription: {
+          list: [
+            "The teaching content of javascript framework includes vue3 and react",
+            "Programming languages include Javascript(ES6) and Typescript",
+            "Teach twice a week",
+          ],
+        },
+      },
+      {
         jobTitle: "Freelance",
         company: "Self employed",
         location: "Kaohsiung City, Taiwan",
