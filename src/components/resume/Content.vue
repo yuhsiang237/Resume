@@ -99,7 +99,7 @@ export default defineComponent({
         company: "Wistron ITS",
         location: "Taipei, Taiwan",
         workStart: "Feb. 2022",
-        workEnd: "Present (4 mos)",
+        workEnd: `Present (${(new Date().getMonth()-new Date('2022-02-01 00:00:00').getMonth())+1} mos)`,
         experienceDescription: {
           subject: "Stationed at E.SUN Commercial Bank, Ltd.",
           list: [
