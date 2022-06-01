@@ -127,7 +127,7 @@ export default defineComponent({
         location: "Taipei, Taiwan",
         workStart: "Mar. 2022",
         workEnd: `Present (${
-          new Date().getMonth() - new Date("2022-02-01 00:00:00").getMonth() + 1
+          new Date().getMonth() - new Date("2022-03-01 00:00:00").getMonth() + 1
         } mos)`,
         experienceDescription: {
           list: [
