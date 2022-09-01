@@ -212,6 +212,12 @@ export default defineComponent({
           "The resume created with Vue3 and Typescript, and has workflow(CI/CD pipeline) on github",
         href: "https://github.com/yuhsiang237/Resume",
       },
+      {
+        projectName: "Project Structure",
+        description:
+          "This is an example API Project. It bases on \"BusinessActor\" and \"QueryAccessor\", which makes the program responsibilities clear and easy to test.",
+        href: "https://github.com/yuhsiang237/project-structure",
+      },
     ]);
 
     const skillList = ref<Skill[]>([
