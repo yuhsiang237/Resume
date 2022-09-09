@@ -218,6 +218,12 @@ export default defineComponent({
           "This is an example API Project. It bases on \"BusinessActor\" and \"QueryAccessor\", which makes the program responsibilities clear and easy to test.",
         href: "https://github.com/yuhsiang237/project-structure",
       },
+      {
+        projectName: "C# Redis Cache Service",
+        description:
+          "The project is a cache-service implement of id list.",
+        href: "https://github.com/yuhsiang237/c-sharp-redis-cache",
+      },
     ]);
 
     const skillList = ref<Skill[]>([
