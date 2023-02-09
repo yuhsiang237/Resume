@@ -99,8 +99,8 @@ export default defineComponent({
         company: "Wistron ITS",
         location: "Taipei, Taiwan",
         workStart: "Feb. 2022",
-        workEnd: `Present (${
-          new Date().getMonth() - new Date("2022-02-01 00:00:00").getMonth() + 1
+        workEnd: `Present (${new Date().getFullYear() - new Date("2022-02-01 00:00:00").getFullYear() } yrs  
+        ${new Date().getMonth() - new Date("2022-02-01 00:00:00").getMonth() + 1
         } mos)`,
         experienceDescription: {
           subject: "Stationed at E.SUN Commercial Bank, Ltd.",
@@ -126,9 +126,7 @@ export default defineComponent({
         company: "Self employed",
         location: "Taipei, Taiwan",
         workStart: "Mar. 2022",
-        workEnd: `Present (${
-          new Date().getMonth() - new Date("2022-03-01 00:00:00").getMonth() + 1
-        } mos)`,
+        workEnd: "Jun. 2022 (4 mos)",
         experienceDescription: {
           list: [
             "The teaching content of javascript framework includes vue3 and react",
