@@ -222,6 +222,12 @@ export default defineComponent({
           "The project is a cache-service implement of id list.",
         href: "https://github.com/yuhsiang237/c-sharp-redis-cache",
       },
+      {
+        projectName: "C# PDF Report",
+        description:
+          "A demo of generating a PDF report by C# and iText7.",
+        href: "https://github.com/yuhsiang237/ReportPDF",
+      },
     ]);
 
     const skillList = ref<Skill[]>([
