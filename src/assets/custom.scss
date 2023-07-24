@@ -1,0 +1,43 @@
+.footer {
+  padding-top: 30px;
+}
+
+.main-wrapper {
+  border-radius: 8px !important;
+}
+.wrapper {
+  border-radius: 8px !important;
+}
+
+.sidebar-wrapper {
+  border-radius: 0px 8px 8px 0px !important;
+}
+
+.profile-container {
+  border-radius: 0px 8px 0px 0px !important;
+}
+.profile {
+  border-radius: 50% !important;
+}
+
+.label {
+  display: inline;
+  padding: 0.2em 0.6em 0.3em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25em;
+  margin: 0.2em;
+}
+
+.label-default {
+  background-color: #777;
+}
+
+.skillset {
+  word-break: break-all;
+}
