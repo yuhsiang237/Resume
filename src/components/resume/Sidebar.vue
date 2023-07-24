@@ -12,10 +12,6 @@
     </div>
     <div class="contact-container container-block">
       <ul class="list-unstyled contact-list">
-        <li v-if="concact.email" class="email">
-          <i class="fas fa-envelope"></i
-          ><a :href="'mailto: ' + concact.email">{{ concact.email }}</a>
-        </li>
         <li v-if="concact.phone" class="phone">
           <i class="fas fa-phone"></i
           ><a href="tel:0123 456 789">0123 456 789</a>
@@ -67,7 +63,6 @@ export default defineComponent({
       tagline: "Software Engineer",
     });
     const concact = ref<Concact>({
-      email: "umworksite@gmail.com",
       website: "yuhsiang237.github.io",
       linkedin: "yu-hsiang-lin-6046ab22b",
       github: "yuhsiang237",
