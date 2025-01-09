@@ -95,15 +95,26 @@ export default defineComponent({
   setup() {
     const experienceList = ref<Experience[]>([
       {
+        jobTitle: "Uber eat driver",
+        company: "Uber",
+        location: "Kaohsiung City, Taiwan",
+        workStart: "June. 2024",
+           workEnd: `Present now`,
+        experienceDescription: {
+          list: [
+            "Delivery food",
+            "Try part time job",
+          ],
+        },
+      },
+      {
         jobTitle: "Software Engineer",
         company: "Wistron ITS",
         location: "Taipei, Taiwan",
         workStart: "Feb. 2022",
-        workEnd: `Present (${new Date().getFullYear() - new Date("2022-02-01 00:00:00").getFullYear() } yrs  
-        ${new Date().getMonth() - new Date("2022-02-01 00:00:00").getMonth() + 1
-        } mos)`,
+        workEnd: "Mar. 2024(2 yrs 1 mos)",
         experienceDescription: {
-          subject: "Stationed at E.SUN Commercial Bank, Ltd.",
+          subject: "Stationed at E.SUN Commercial Bank, Ltd. / KGI Bank",
           list: [
             "Build the financial loan system (E.SUN Commercial Bank, Ltd.)",
             "Create the procedure of finance in PostgreSQL and Microsoft SQL Server",
@@ -139,7 +150,7 @@ export default defineComponent({
         company: "Linkchain",
         location: "Kaohsiung City, Taiwan",
         workStart: "Aug. 2018",
-        workEnd: "Aug 2020 (2 yrs 1 mos)",
+        workEnd: "Aug 2020 (2 yrs 1 ms)",
         experienceDescription: {
           list: [
             "Develop the government project of agriculture",
